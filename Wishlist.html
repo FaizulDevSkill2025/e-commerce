@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <!-- header -->
+    <header class="py-4 shadow-sm bg-white">
+        <div class="container flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <!-- Logo -->
+             <a href="#">
+                <img src="Image/logo.svg" class="w-32" />
+             </a>
+            <!--Search bar-->
+            <form class="w-full max-w-xl relative flex md:flex-1 md:mx-6" role="search">
+                <span class="absolute left-4 top-3 text-lg text-gray-400">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="search" class="flex-1 min-w-0 border border-primary border-r-0 pl-10 py-2 rounded-l-md focus:outline-none" placeholder="Search" aria-label="Search products">
+                <button type="submit" class="bg-primary border border-primary text-white px-5 py-2 rounded-r-md hover:bg-transparent hover:text-primary transition" style="background-color: #fc3d57;">Search</button>
+            </form>
+            <!--Icons-->
+            <div class="flex items-center justify-center space-x-4">
+                <a href="Wishlist.html" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="text-xs leading-3">Wish List</div>
+                    <span class="absolute right-0 top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">8</span>
+                </a>
+                <a href="Cart.html" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div class="text-xs leading-3">Cart</div>
+                    <span class="absolute right-0 top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">8</span>
+                </a>
+                <a href="Account.html" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <div class="text-xs leading-3">Account</div>
+                    <span class="absolute right-0 top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">8</span>
+                </a>
+            </div>
+        </div>
+     </header>
+    <!-- header End -->
+     <!--Navbar-->
+     <nav class="bg-gray-800">
+        <div class="container flex flex-col md:flex-row md:items-center">
+             <!--All Category-->
+             <div class="w-full md:w-1/4 px-2 py-3 bg-primary flex items-center cursor-pointer relative group">
+                <span class="text-white">
+                    <i class="fa-sharp fa-solid fa-bars"></i>
+                </span>
+                <span class="capitalize ml-1 text-white">All Categories</span>
+                <div class="absolute w-full left-0 top-full bg-white shadow-sm py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-500 invisible group-hover:visible">
+                    <!--Single Category-->
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./Image/bed.svg" alt="" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Bad Room</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./Image/sofa.svg" alt="" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Sofa</span>
+                    </a>
+                    <!--Single Category End-->
+                    <!--Single Category-->
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./Image/office.svg" alt="" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Office</span>
+                    </a>
+                    <!--Single Category End-->
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./Image/outdoor-cafe.svg" alt="" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Out Door</span>
+                    </a>
+                    <!--Single Category End-->
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./Image/terrace.svg" alt="" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Mattress</span>
+                    </a>
+                    <!--Single Category End-->
+                </div>
+             </div>
+             <!--All Category End-->
+             <!--Nav Link-->
+                 <div class="flex w-full flex-col gap-3 py-3 md:flex-1 md:flex-row md:items-center md:justify-between md:pl-10 md:py-0">
+                     <div class="flex flex-wrap items-center gap-x-6 gap-y-2 capitalize">
+                    <a href="Index.html" class="text-gray-200 hover:text-white transition">Home</a>
+                    <a href="Shop.html" class="text-gray-200 hover:text-white transition">Shop</a>
+                    <a href="#" class="text-gray-200 hover:text-white transition">About us</a>
+                    <a href="#" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                </div>
+                <a href="Login.html" class="text-gray-200 hover:text-white transition">Login/Register</a>
+             </div>
+        </div>
+     </nav>
+     <!--Navbar End-->
+     <!--breadcrumbs-->
+     <div class="container py-4 flex items-center gap-3"> 
+        <a href="Index.html" class="text-primary text-base">
+            <i class="fa-sharp fa-solid fa-house"></i>
+        </a>
+        <span class="text-sm text-gray-400">
+            <i class="fa-solid fa-chevron-right"></i>
+        </span>
+        <p class="text-gray-600 font-medium">Account Info</p>
+      </div>
+     <!--breadcrumbs End-->
+     <!--Account Wrapper-->
+    <div class="container grid grid-cols-1 md:grid-cols-12 items-start gap-6 pt-4 pb-16">
+        <!--Sidebar-->
+        <div class="md:col-span-3">
+            <!--Account Profile-->
+            <div class="px-4 py-3 shadow flex items-center gap-4">
+                <div class="flex-shrink-0">
+                    <img src="./Image/avatar.png" class="rounded-full w-14 h-14 border border-gray-200 p-1 object-cover">
+                </div>
+                <div class="flex-grow">
+                    <p class="text-gray-600">Hello,</p>
+                    <h4 class="text-gray-800 font-medium">
+                        Russel Ahmed
+                    </h4>
+                </div>
+            </div>
+            <!--Account Profile End-->
+            <!--Profile Link-->
+            <div class="mt-6 bg-white shadow rounded p-4 divide-y divide-gray-200 space-y-4 text-gray-600">
+                <!--Single Link-->
+                <div class="space-y-1 pl-8 pt-4">
+                    <a href="#" class="relative text-primary block font-medium capitalize transition">
+                        <span class="absolute left-8 top-0 text-base">
+                            <!-- <i class="fa-regular fa-address-card"></i> -->
+                        </span>
+                        Manage Account
+                    </a>
+                    <a href="#" class="relative hover:text-primary block capitalize transition">
+                        Profile Information
+                    </a>
+                    <a href="#" class="relative hover:text-primary block capitalize transition">
+                        Manage Address
+                    </a>
+                    <a href="#" class="relative hover:text-primary block capitalize transition">
+                        Change Password
+                    </a>
+                </div>
+                <!--Single Link End-->
+                <!--Single Link-->
+                <div class="space-y-1 pl-8 pt-4">
+                    <a href="#" class="relative text-primary block font-medium capitalize transition">
+                        <span class="absolute left-8 top-0 text-base">
+                           <!-- <i class="fa-regular fa-address-card"></i> -->
+                        </span>
+                        My Order History
+                    </a>
+                    <a href="#" class="relative text-primary block font-medium capitalize transition">
+                        <span class="absolute left-8 top-0 text-base">
+                            <!-- <i class="fa-regular fa-address-card"></i> -->
+                        </span>
+                        My Returns
+                    </a>
+                    <a href="#" class="relative hover:text-primary block capitalize transition">
+                        My Cancelations
+                    </a>
+                    <a href="#" class="relative hover:text-primary block capitalize transition">
+                        My Reviews
+                    </a>
+                </div>
+                <!--Single Link End-->
+                <!--Single Link-->
+                <div class="space-y-1 pl-8 pt-4">
+                    <a href="#" class="relative text-primary block font-medium capitalize transition">
+                        <span class="absolute left-8 top-0 text-base">
+                            <!-- <i class="fa-solid fa-money-bill-1-wave"></i> -->
+                        </span>
+                        Payment Methods
+                    </a>
+                    <a href="#" class="relative hover:text-primary block capitalize transition">
+                        Voucher
+                    </a>
+                </div>
+                <!--Single Link End-->
+                <!--Single Link-->
+                <div class="space-y-1 pl-8 pt-4">
+                    <a href="#" class="relative text-primary block font-medium capitalize transition">
+                        <span class="absolute left-8 top-0 text-base">
+                           <!-- <i class="fa-regular fa-heart"></i> -->
+                        </span>
+                        My Wishlist
+                    </a>
+                </div>
+                <!--Single Link End-->
+                <!--Single Link-->
+                <div class="space-y-1 pl-8 pt-4">
+                    <a href="#" class="relative text-primary block font-medium capitalize transition">
+                        <span class="absolute left-8 top-0 text-base">
+                            <!-- <i class="fa-solid fa-right-from-bracket"></i> -->
+                        </span>
+                        Logout
+                    </a>
+                </div>
+                <!--Single Link End-->
+            </div>
+            <!--Profile Link End-->
+        </div>
+        <!--Sidebar End-->
+       <!--Wish List-->
+    <div class="md:col-span-9 space-y-4">
+        <!--Single Wish List-->
+        <div class="flex flex-col gap-4 p-4 border border-gray-200 rounded sm:flex-row sm:items-center sm:justify-between">
+            <!--Wish List Image-->
+            <div class="w-28 flex-shrink-0">
+                <img src="./Image/product12.jpg" class="w-full">
+            </div>
+            <!--Wish List Image End-->
+            <!--Wish List Content-->
+            <div class="w-full sm:w-1/3">
+                <h2 class="text-gray-800 text-xl font-medium uppercase">
+                    Italian L Shape Sofa
+                </h2>
+                <p class="text-gray-500 text-sm">
+                    Availability : <span class="text-green-600">In Stock</span>
+                </p>
+            </div>
+            <!--Wish List Content End-->
+            <div class="text-primary text-lg font-semibold">#320.00</div>
+            <a href="#" class="px-6 py-2 text-center text-sm text-white bg-red-600 border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium">Add To Cart</a>
+            <div class="text-gray-600 cursor-pointer hover:text-primary">
+                <i class="fa-solid fa-trash"></i>
+            </div>
+        </div>
+      <div class="md:col-span-9 space-y-4">
+        <!--Single Wish List-->
+        <div class="flex flex-col gap-4 p-4 border border-gray-200 rounded sm:flex-row sm:items-center sm:justify-between">
+            <!--Wish List Image-->
+            <div class="w-28 flex-shrink-0">
+                <img src="./Image/product12.jpg" class="w-full">
+            </div>
+            <!--Wish List Image End-->
+            <!--Wish List Content-->
+            <div class="w-full sm:w-1/3">
+                <h2 class="text-gray-800 text-xl font-medium uppercase">
+                    Italian L Shape Sofa
+                </h2>
+                <p class="text-gray-500 text-sm">
+                    Availability : <span class="text-red-600">Out Of Stock</span>
+                </p>
+            </div>
+            <!--Wish List Content End-->
+            <div class="text-primary text-lg font-semibold">#220.00</div>
+            <a href="#" class=" cursor-not-allowed px-6 py-2 text-center text-sm text-white bg-red-500 border border-primary rounded transition uppercase font-roboto font-medium">Add To Cart</a>
+            <div class="text-gray-600 cursor-pointer hover:text-primary">
+                <i class="fa-solid fa-trash"></i>
+            </div>
+        </div>
+        <!--Single Wish List End-->
+    </div>
+        <!--Single Wish List End-->
+       </div>
+   
+       <!--Wish List End-->
+     </div>
+     <!--Account Wrapper End-->
+     <!--Footer-->
+     <footer class="bg-white pt-16 pb-12 border-t border-gray-100"  style="background-color: black;">
+        <div class="container grid grid-cols-1 gap-10 md:grid-cols-3">
+            <!--Footer Text-->
+            <div class="space-y-8">
+                <img src="./Image/logo.svg" class="w-32" alt="NTP Solution logo">
+                <p class="text-gray-500">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <!--Footer Text End-->
+                <!--Footer Links-->
+                <div class="md:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Solutions</h3>
+            <div class="mt-4 space-y-4">
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                    Networking
+                </a>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                    Analytics
+                </a>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                    Commerce
+                </a>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                    Insights
+                </a>
+            </div>
+            </div>
+            <div>
+                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Support</h3>
+                    <div class="mt-4 space-y-4">
+                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                            Networking
+                        </a>
+                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                            Analytics
+                        </a>
+                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                            Commerce
+                        </a>
+                        <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                            Insights
+                        </a>
+                    </div>
+            </div>
+            <div>
+                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Service</h3>
+            <div class="mt-4 space-y-4">
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                    Networking
+                </a>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                    Analytics
+                </a>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                    Commerce
+                </a>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                    Insights
+                </a>
+            </div>
+            </div>
+            <div>
+                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Promotion</h3>
+            <div class="mt-4 space-y-4">
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                    Networking
+                </a>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                    Analytics
+                </a>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                    Commerce
+                </a>
+                <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">
+                    Insights
+                </a>
+            </div>
+            </div>
+                </div>
+          </div>
+      </footer>
+      <!--Footer End-->
+     <!--Copyright-->
+     <div class="bg-gray-800 py-4">
+        <div class="container flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"> 
+            <p class="text-white">Cumilla University -All Rights Reserved</p>
+            <img src="./Image/methods.png" alt="" class="h-5">
+        </div>
+     </div>
+     <!--Copyright End-->
+</body>
+</html>
