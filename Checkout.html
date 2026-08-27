@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Checkout</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
@@ -95,8 +95,8 @@
                      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 capitalize">
                     <a href="Index.html" class="text-gray-200 hover:text-white transition">Home</a>
                     <a href="Shop.html" class="text-gray-200 hover:text-white transition">Shop</a>
-                    <a href="#" class="text-gray-200 hover:text-white transition">About us</a>
-                    <a href="#" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                    <a href="Aboutus.html" class="text-gray-200 hover:text-white transition">About us</a>
+                    <a href="Contactus.html" class="text-gray-200 hover:text-white transition">Contact Us</a>
                 </div>
                 <a href="Login.html" class="text-gray-200 hover:text-white transition">Login/Register</a>
              </div>
@@ -115,7 +115,7 @@
       </div>
      <!--breadcrumbs End-->
     <!--Checkout Wrapper-->
-    <div class="container grid gap-6 grid-cols-1 lg:grid-cols-12 items-start pb-16 pt-4">
+    <form class="container grid gap-6 grid-cols-1 lg:grid-cols-12 items-start pb-16 pt-4" action="#" method="post">
         <!--Checkout Form-->
         <div class="lg:col-span-8 border border-gray-200 p-4 rounded">
             <h3 class="text-lg font-medium capitalize mb-4">Checkout</h3>
@@ -123,61 +123,72 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="text-gray-600 mb-2 block">First Name <span class="text-primary"></span>*</label>
-                        <input type="text" class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0" >
+                        <input type="text" name="first-name" autocomplete="given-name" required class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0" >
                     </div>
                     <div>
                         <label class="text-gray-600 mb-2 block">Last Name <span class="text-primary"></span>*</label>
-                        <input type="text" class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
+                        <input type="text" name="last-name" autocomplete="family-name" required class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
                     </div>
                     <div>
                         <label class="text-gray-600 mb-2 block">
                             Company Name 
                         </label>
-                        <input type="text" class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
+                        <input type="text" name="company" autocomplete="organization" class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
                     </div>
                     <div>
                         <label class="text-gray-600 mb-2 block">
                           Country/Region <span class="text-primary"></span>*
                         </label>
-                        <input type="text" class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
+                        <input type="text" name="country" autocomplete="country-name" required class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
                     </div>
                     <div>
                         <label class="text-gray-600 mb-2 block">
                           Street Address <span class="text-primary"></span>*
                         </label>
-                        <input type="text" class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
+                        <input type="text" name="address" autocomplete="street-address" required class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
                     </div>
                     <div>
                         <label class="text-gray-600 mb-2 block">
                           Town/City <span class="text-primary"></span>*
                         </label>
-                        <input type="text" class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
+                        <input type="text" name="city" autocomplete="address-level2" required class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
                     </div>
                     <div>
                         <label class="text-gray-600 mb-2 block">
                           Zip Code <span class="text-primary"></span>*
                         </label>
-                        <input type="text" class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
+                        <input type="text" name="zip-code" autocomplete="postal-code" required class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
                     </div>
                     <div>
                         <label class="text-gray-600 mb-2 block">
                           Phone Number <span class="text-primary"></span>*
                         </label>
-                        <input type="text" class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
+                        <input type="tel" name="phone" autocomplete="tel" required class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
                     </div>
                     <div>
                         <label class="text-gray-600 mb-2 block">
                           Email Address <span class="text-primary"></span>*
                         </label>
-                        <input type="text" class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
+                        <input type="email" name="email" autocomplete="email" required class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
                     </div>
                     <div>
                         <label class="text-gray-600 mb-2 block">
                           Date Of Birth <span class="text-primary"></span>*
                         </label>
-                        <input type="text" class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
+                        <input type="date" name="date-of-birth" autocomplete="bday" class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0">
                     </div>
                 </div>
+            </div>
+            <div class="border-t border-gray-200 mt-4 pt-4">
+                <h4 class="text-gray-800 text-lg mb-3 font-medium uppercase">Payment Method</h4>
+                <label class="flex items-center gap-3 text-gray-600 text-sm">
+                    <input type="radio" name="payment-method" value="cash-on-delivery" checked class="text-primary focus:ring-0">
+                    Cash on delivery
+                </label>
+                <label class="flex items-center gap-3 text-gray-600 text-sm mt-3">
+                    <input type="radio" name="payment-method" value="card" class="text-primary focus:ring-0">
+                    Credit or debit card
+                </label>
             </div>
         </div>
         <!--Checkout Form End-->
@@ -224,14 +235,14 @@
                 <input id="agreement" type="checkbox" class="text-primary focus:ring-0 rounded-md cursor-pointer w-3 h-3">
                 <label for="agreement" class="text-gray-600 ml-3 cursor-pointer text-sm">Agree to our <a href="#" class="text-primary"></a> Terms & Conditions </label>
             </div>
-            <a href="#" class="w-full block text-center bg-primary border border-primary text-green px-4 py-3 font-medium rounded-md hover:bg-transparent hover:bg-primary">Place Order</a>
+            <button type="submit" class="w-full block text-center bg-primary border border-primary text-white px-4 py-3 font-medium rounded-md hover:bg-transparent hover:text-primary transition" style="background-color: red;">Place Order</button>
         </div>
         <!--Sidebar End-->
-    </div>
+    </form>
     <!--Checkout Wrapper End-->
 
      <!--Footer-->
-     <footer class="bg-white pt-16 pb-12 border-t border-gray-100">
+    <footer class="footer-dynamic bg-white pt-16 pb-12 border-t border-gray-100">
         <div class="container grid grid-cols-1 gap-10 md:grid-cols-3">
             <!--Footer Text-->
             <div class="space-y-8">
@@ -332,7 +343,7 @@
      <!--Copyright-->
      <div class="bg-gray-800 py-4">
         <div class="container flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"> 
-            <p class="text-white">Cumilla University -All Rights Reserved</p>
+            <p class="text-white">&copy; <b>2026</b> - Comilla University</p>
             <img src="./Image/methods.png" alt="" class="h-5">
         </div>
      </div>

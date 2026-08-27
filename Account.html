@@ -95,8 +95,8 @@
                 <div class="flex items-center space-x-6 capitalize">
                     <a href="Index.html" class="text-gray-200 hover:text-white transition">Home</a>
                     <a href="Shop.html" class="text-gray-200 hover:text-white transition">Shop</a>
-                    <a href="#" class="text-gray-200 hover:text-white transition">About us</a>
-                    <a href="#" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                    <a href="Aboutus.html" class="text-gray-200 hover:text-white transition">About us</a>
+                    <a href="Contactus.html" class="text-gray-200 hover:text-white transition">Contact Us</a>
                 </div>
                 <a href="Login.html" class="text-gray-200 hover:text-white transition">Login/Register</a>
              </div>
@@ -109,15 +109,15 @@
             <i class="fa-sharp fa-solid fa-house"></i>
         </a>
         <span class="text-sm text-gray-400">
-            <i class="fa-regular fa-chevron-right"></i>
+            <i class="fa-solid fa-chevron-right"></i>
         </span>
         <p class="text-gray-600 font-medium">Account Info</p>
       </div>
      <!--breadcrumbs End-->
      <!--Account Wrapper-->
-    <div class="container grid grid-cols-12 items-start gap-6 pt-4 pb-16">
+    <div id="account-dashboard" class="container grid grid-cols-1 lg:grid-cols-12 items-start gap-6 pt-4 pb-16">
         <!--Sidebar-->
-        <div class="col-span-3">
+        <div class="lg:col-span-3">
             <!--Account Profile-->
             <div class="px-4 py-3 shadow flex items-center gap-4">
                 <div class="flex-shrink-0">
@@ -154,7 +154,7 @@
                 <!--Single Link End-->
                 <!--Single Link-->
                 <div class="space-y-1 pl-8 pt-4">
-                    <a href="#" class="relative text-primary block font-medium capitalize transition">
+                    <a href="Orders.html" class="relative text-primary block font-medium capitalize transition">
                         <span class="absolute left-8 top-0 text-base">
                          <!-- <i class="fa-regular fa-address-card"></i> -->   
                         </span>
@@ -212,7 +212,7 @@
         </div>
         <!--Sidebar End-->
         <!--Profile Info-->
-        <div  class="col-span-9 grid grid-cols-3 gap-4">
+        <div  class="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <!--Single Card-->
             <div class="shadow rounded bg-white px-4 pt-6 pb-8" style="background-color:darkcyan">
                 <div class="flex justify-between items-center mb-4">
@@ -257,7 +257,7 @@
      </div>
      <!--Account Wrapper End-->
      <!--Footer-->
-     <footer class="bg-white pt-16 pb-12 border-t border-gray-100" style="background-color: black;">
+    <footer class="footer-dynamic bg-white pt-16 pb-12 border-t border-gray-100" style="background-color: black;">
         <div class="container grid grid-cols-3">
             <!--Footer Text-->
             <div class="col-span-1 space-y-8">
@@ -359,10 +359,68 @@
      <!--Copyright-->
      <div class="bg-gray-800 py-4">
         <div class="container flex items-center justify-between"> 
-            <p class="text-white">Cumilla University -All Rights Reserved</p>
+            <p class="text-white">&copy; <b>2026</b> - Comilla University</p>
             <img src="./Image/methods.png" alt="" class="h-5">
         </div>
      </div>
      <!--Copyright End-->
+     <script>
+        const dashboard = document.getElementById('account-dashboard');
+        const orders = [
+            { id: '#NTP-1048', date: '24 Aug 2026', item: 'Italian L Shape Sofa', total: '320.00 TK', status: 'Delivered', image: './Image/product12.jpg' },
+            { id: '#NTP-1031', date: '12 Aug 2026', item: 'Modern Lounge Chair', total: '220.00 TK', status: 'Processing', image: './Image/product5.jpg' },
+            { id: '#NTP-1019', date: '03 Aug 2026', item: 'Classic Dining Chair', total: '180.00 TK', status: 'Cancelled', image: './Image/product7.jpg' }
+        ];
+
+        const statusClasses = {
+            Delivered: 'bg-green-100 text-green-700',
+            Processing: 'bg-yellow-100 text-yellow-700',
+            Cancelled: 'bg-red-100 text-red-700'
+        };
+
+        function renderOrders(filter = 'All') {
+            const visibleOrders = filter === 'All' ? orders : orders.filter(order => order.status === filter);
+            const orderList = document.getElementById('order-list');
+            orderList.innerHTML = visibleOrders.length ? visibleOrders.map(order => `
+                <article class="flex flex-col gap-4 p-4 border border-gray-200 rounded-sm sm:flex-row sm:items-center sm:justify-between">
+                    <div class="flex items-center gap-4"><img src="${order.image}" alt="${order.item}" class="w-16 h-16 object-cover rounded-sm"><div><p class="text-gray-800 font-medium">${order.item}</p><p class="text-gray-500 text-sm mt-1">${order.id} · ${order.date}</p></div></div>
+                    <div class="flex items-center justify-between gap-6 sm:justify-end"><span class="px-3 py-1 rounded-full text-xs font-medium ${statusClasses[order.status]}">${order.status}</span><strong class="text-gray-800">${order.total}</strong></div>
+                </article>`).join('') : '<p class="text-gray-500 text-sm p-4 border border-gray-200 rounded-sm">No orders in this category.</p>';
+        }
+
+        dashboard.innerHTML = `
+            <aside class="lg:col-span-3 space-y-6">
+                <div class="px-4 py-4 shadow rounded-sm bg-white flex items-center gap-4"><img src="./Image/avatar.png" class="rounded-full w-14 h-14 border border-gray-200 p-1 object-cover" alt="Russel Ahmed"><div><p class="text-gray-600 text-sm">Hello,</p><h2 class="text-gray-800 font-medium">Russel Ahmed</h2></div></div>
+                <nav class="bg-white shadow rounded-sm p-4 space-y-2 text-gray-600"><a href="#overview" class="flex items-center gap-3 px-3 py-2 rounded bg-red-50 text-red-500 font-medium"><i class="fa-solid fa-chart-line w-4"></i>Overview</a><a href="#profile" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-50 hover:text-red-500"><i class="fa-regular fa-user w-4"></i>Profile information</a><a href="Wishlist.html" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-50 hover:text-red-500"><i class="fa-regular fa-heart w-4"></i>My wishlist</a><a href="Cart.html" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-50 hover:text-red-500"><i class="fa-solid fa-cart-shopping w-4"></i>My cart</a><a href="Login.html" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-50 hover:text-red-500"><i class="fa-solid fa-right-from-bracket w-4"></i>Logout</a></nav>
+            </aside>
+            <section class="lg:col-span-9 space-y-6" id="overview">
+                <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between"><div><p class="text-red-500 uppercase tracking-wider text-sm font-semibold">Your account</p><h1 class="text-3xl font-medium text-gray-800">Good to see you, Russel.</h1></div><a href="Shop.html" class="text-red-500 hover:underline text-sm">Continue shopping <i class="fa-solid fa-arrow-right ml-1"></i></a></div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4"><div class="bg-red-500 text-white rounded-sm p-5"><i class="fa-solid fa-box-open text-2xl mb-4"></i><p class="text-3xl font-semibold">12</p><p class="text-sm mt-1 text-red-100">Total orders</p></div><div class="bg-white shadow rounded-sm p-5 border border-gray-100"><i class="fa-regular fa-heart text-red-500 text-2xl mb-4"></i><p class="text-3xl font-semibold text-gray-800">8</p><p class="text-sm mt-1 text-gray-500">Saved items</p></div><div class="bg-white shadow rounded-sm p-5 border border-gray-100"><i class="fa-solid fa-ticket text-red-500 text-2xl mb-4"></i><p class="text-3xl font-semibold text-gray-800">3</p><p class="text-sm mt-1 text-gray-500">Available vouchers</p></div></div>
+                <div id="profile" class="bg-white shadow rounded-sm p-5 sm:p-6"><div class="flex items-center justify-between mb-5"><h2 class="text-xl font-medium text-gray-800">Personal profile</h2><button id="edit-profile" type="button" class="text-red-500 text-sm hover:underline">Edit profile</button></div><form id="profile-form" class="grid grid-cols-1 sm:grid-cols-2 gap-4"><label class="text-gray-500 text-sm">Full name<input name="name" value="Russel Ahmed" disabled class="mt-2 block w-full border border-gray-300 px-4 py-3 text-gray-700 text-sm rounded focus:border-red-500 focus:ring-0"></label><label class="text-gray-500 text-sm">Email address<input name="email" type="email" value="example@gmail.com" disabled class="mt-2 block w-full border border-gray-300 px-4 py-3 text-gray-700 text-sm rounded focus:border-red-500 focus:ring-0"></label><label class="text-gray-500 text-sm">Phone number<input name="phone" type="tel" value="+880 1711 333333" disabled class="mt-2 block w-full border border-gray-300 px-4 py-3 text-gray-700 text-sm rounded focus:border-red-500 focus:ring-0"></label><label class="text-gray-500 text-sm">Default address<input name="address" value="Dhaka, Bangladesh" disabled class="mt-2 block w-full border border-gray-300 px-4 py-3 text-gray-700 text-sm rounded focus:border-red-500 focus:ring-0"></label><button id="save-profile" type="submit" class="hidden sm:col-span-2 w-fit bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600">Save changes</button><p id="profile-message" class="hidden sm:col-span-2 text-green-600 text-sm">Profile updated successfully.</p></form></div>
+                <div class="bg-white shadow rounded-sm p-5 sm:p-6"><div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-5"><div class="flex items-center justify-between gap-4"><h2 class="text-xl font-medium text-gray-800">Recent orders</h2><a href="Orders.html" class="text-red-500 text-sm hover:underline whitespace-nowrap">View all orders <i class="fa-solid fa-arrow-right ml-1"></i></a></div><div class="flex flex-wrap gap-2" id="order-filters"><button type="button" data-filter="All" class="order-filter px-3 py-1 text-sm rounded-full bg-red-500 text-white">All</button><button type="button" data-filter="Processing" class="order-filter px-3 py-1 text-sm rounded-full border border-gray-200 text-gray-600">Processing</button><button type="button" data-filter="Delivered" class="order-filter px-3 py-1 text-sm rounded-full border border-gray-200 text-gray-600">Delivered</button><button type="button" data-filter="Cancelled" class="order-filter px-3 py-1 text-sm rounded-full border border-gray-200 text-gray-600">Cancelled</button></div></div><div id="order-list" class="space-y-3"></div></div>
+            </section>`;
+
+        renderOrders();
+        document.querySelectorAll('.order-filter').forEach(button => button.addEventListener('click', () => {
+            document.querySelectorAll('.order-filter').forEach(item => item.className = 'order-filter px-3 py-1 text-sm rounded-full border border-gray-200 text-gray-600');
+            button.className = 'order-filter px-3 py-1 text-sm rounded-full bg-red-500 text-white';
+            renderOrders(button.dataset.filter);
+        }));
+
+        document.getElementById('edit-profile').addEventListener('click', event => {
+            const form = document.getElementById('profile-form');
+            form.querySelectorAll('input').forEach(input => input.disabled = false);
+            document.getElementById('save-profile').classList.remove('hidden');
+            event.target.textContent = 'Editing';
+        });
+
+        document.getElementById('profile-form').addEventListener('submit', event => {
+            event.preventDefault();
+            event.target.querySelectorAll('input').forEach(input => input.disabled = true);
+            document.getElementById('save-profile').classList.add('hidden');
+            document.getElementById('profile-message').classList.remove('hidden');
+            document.getElementById('edit-profile').textContent = 'Edit profile';
+        });
+     </script>
 </body>
 </html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratings & Reviews</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body class="bg-gray-50">
+    <header class="py-4 shadow-sm bg-white">
+        <div class="container flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <a href="Index.html" aria-label="NTP Solution home"><img src="Image/logo.svg" class="w-32" alt=""></a>
+            <form class="w-full max-w-xl relative flex md:flex-1 md:mx-6" role="search">
+                <span class="absolute left-4 top-3 text-lg text-gray-400">
+                <i class="fas fa-search"></i>
+               </span>
+                <input type="search" class="flex-1 min-w-0 border border-gray-300 border-r-0 pl-10 py-2 rounded-l-md focus:outline-none" placeholder="Search" aria-label="Search products">
+                <button type="submit" class="bg-red-500 border border-red-500 text-white px-5 py-2 rounded-r-md hover:bg-transparent hover:text-red-500 transition">Search</button>
+            </form>
+            <div class="flex items-center justify-center space-x-4">
+                <a href="Wishlist.html" class="text-center text-gray-700 hover:text-red-500 relative">
+                    <div class="text-2xl">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="text-xs leading-3">Wish List</div>
+                    <span class="absolute right-0 top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs" style="background-color: red;">8</span>
+                </a>
+                <a href="Cart.html" class="text-center text-gray-700 hover:text-red-500 relative">
+                    <div class="text-2xl">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div class="text-xs leading-3">Cart</div>
+                    <span class="absolute right-0 top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs" style="background-color: red;">8</span>
+                </a>
+                
+                <a href="Account.html" class="text-center text-gray-700 hover:text-red-500 relative">
+                    <div class="text-2xl">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <div class="text-xs leading-3">Account</div>
+                    <span class="absolute right-0 top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs" style="background-color: red;">8</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <nav class="bg-gray-800">
+        <div class="container flex flex-col md:flex-row md:items-center">
+             <!--All Category-->
+             <div class="w-full md:w-1/4 px-2 py-3 bg-primary flex items-center cursor-pointer relative group">
+                <span class="text-white">
+                    <i class="fa-sharp fa-solid fa-bars"></i>
+                </span>
+                <span class="capitalize ml-1 text-white">All Categories</span>
+                <div class="absolute w-full left-0 top-full bg-white shadow-sm py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-500 invisible group-hover:visible">
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./Image/bed.svg" alt="" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Bad Room</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./Image/sofa.svg" alt="" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Sofa</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./Image/office.svg" alt="" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Office</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./Image/outdoor-cafe.svg" alt="" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Out Door</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./Image/terrace.svg" alt="" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Mattress</span>
+                    </a>
+                </div>
+             </div>
+             <!--Nav Link-->
+             <div class="flex w-full flex-col gap-3 py-3 md:flex-1 md:flex-row md:items-center md:justify-between md:pl-10 md:py-0">
+                <div class="flex flex-wrap items-center gap-x-6 gap-y-2 capitalize">
+                    <a href="Index.html" class="text-gray-200 hover:text-white transition">Home</a>
+                    <a href="Shop.html" class="text-gray-200 hover:text-white transition">Shop</a>
+                    <a href="Aboutus.html" class="text-gray-200 hover:text-white transition">About us</a>
+                    <a href="Contactus.html" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                </div>
+                <a href="Login.html" class="text-gray-200 hover:text-white transition">Login/Register</a>
+             </div>
+        </div>
+     </nav>
+    <div class="container py-4 flex items-center gap-3"><a href="Index.html" class="text-red-500"><i class="fa-solid fa-house"></i></a><span class="text-sm text-gray-400"><i class="fa-solid fa-chevron-right"></i></span><a href="View.html" class="text-gray-500 hover:text-red-500">Product View</a><span class="text-sm text-gray-400"><i class="fa-solid fa-chevron-right"></i></span><p class="text-gray-600 font-medium">Ratings & Reviews</p></div>
+
+    <main class="container pb-16">
+        <section class="bg-white border border-gray-200 rounded-sm p-5 sm:p-8 mb-6"><div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between"><div class="flex items-center gap-5"><img src="./Image/product9.jpg" alt="Italian L Shape Sofa" class="w-24 h-24 sm:w-32 sm:h-32 object-cover rounded-sm"><div><p class="text-red-500 uppercase tracking-wider text-sm font-semibold">Customer feedback</p><h1 class="text-2xl sm:text-3xl font-medium text-gray-800 mt-1">Italian L Shape Sofa</h1><div class="flex items-center gap-2 mt-3"><span class="text-yellow-400 text-lg">★★★★★</span><strong class="text-gray-800">4.8</strong><span class="text-gray-500 text-sm">from 150 reviews</span></div></div></div><a href="View.html" class="border border-red-500 text-red-500 px-5 py-2 rounded hover:bg-red-500 hover:text-white transition text-center">View product</a></div></section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+            <div class="bg-white border border-gray-200 rounded-sm p-5 sm:p-6"><h2 class="text-xl font-medium text-gray-800 mb-5">Review summary</h2><div class="flex items-center gap-4 mb-6"><span class="text-5xl font-semibold text-gray-800">4.8</span><div><div class="text-yellow-400 text-xl">★★★★★</div><p class="text-gray-500 text-sm mt-1">150 ratings</p></div></div><div class="space-y-3 text-sm"><div class="flex items-center gap-3"><span class="w-5 text-gray-600">5</span><div class="h-2 flex-1 bg-gray-200 rounded"><div class="h-2 bg-yellow-400 rounded" style="width: 86%"></div></div><span class="w-8 text-right text-gray-500">129</span></div><div class="flex items-center gap-3"><span class="w-5 text-gray-600">4</span><div class="h-2 flex-1 bg-gray-200 rounded"><div class="h-2 bg-yellow-400 rounded" style="width: 12%"></div></div><span class="w-8 text-right text-gray-500">18</span></div><div class="flex items-center gap-3"><span class="w-5 text-gray-600">3</span><div class="h-2 flex-1 bg-gray-200 rounded"><div class="h-2 bg-yellow-400 rounded" style="width: 2%"></div></div><span class="w-8 text-right text-gray-500">3</span></div><div class="flex items-center gap-3"><span class="w-5 text-gray-600">2</span><div class="h-2 flex-1 bg-gray-200 rounded"><div class="h-2 bg-gray-200 rounded" style="width: 0%"></div></div><span class="w-8 text-right text-gray-500">0</span></div><div class="flex items-center gap-3"><span class="w-5 text-gray-600">1</span><div class="h-2 flex-1 bg-gray-200 rounded"><div class="h-2 bg-gray-200 rounded" style="width: 0%"></div></div><span class="w-8 text-right text-gray-500">0</span></div></div><button type="button" id="write-review" class="w-full mt-7 bg-red-500 text-white py-3 rounded hover:bg-red-600 transition">Write a review</button></div>
+
+            <div class="lg:col-span-2 bg-white border border-gray-200 rounded-sm p-5 sm:p-6"><div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-5"><h2 class="text-xl font-medium text-gray-800">What customers say</h2><div class="flex flex-wrap gap-2" id="review-filters"><button type="button" data-filter="all" class="review-filter px-3 py-1 text-sm rounded-full bg-red-500 text-white">All</button><button type="button" data-filter="5" class="review-filter px-3 py-1 text-sm rounded-full border border-gray-200 text-gray-600">5 stars</button><button type="button" data-filter="4" class="review-filter px-3 py-1 text-sm rounded-full border border-gray-200 text-gray-600">4 stars</button><button type="button" data-filter="3" class="review-filter px-3 py-1 text-sm rounded-full border border-gray-200 text-gray-600">3 stars</button></div></div><div class="flex justify-end mb-4"><select id="review-sort" class="border border-gray-300 rounded px-3 py-2 text-sm text-gray-600 focus:outline-none"><option value="newest">Newest first</option><option value="highest">Highest rated</option><option value="lowest">Lowest rated</option></select></div><div id="reviews-list" class="divide-y divide-gray-200"></div></div>
+        </section>
+
+        <section id="review-form-section" class="hidden mt-6 bg-white border border-gray-200 rounded-sm p-5 sm:p-6"><h2 class="text-xl font-medium text-gray-800 mb-5">Share your experience</h2><form id="review-form" class="grid grid-cols-1 sm:grid-cols-2 gap-5"><label class="text-gray-600 text-sm">Your name<input name="name" required class="mt-2 block w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-red-500" placeholder="Your name"></label><label class="text-gray-600 text-sm">Rating<select name="rating" required class="mt-2 block w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-red-500"><option value="5">5 stars</option><option value="4">4 stars</option><option value="3">3 stars</option><option value="2">2 stars</option><option value="1">1 star</option></select></label><label class="text-gray-600 text-sm sm:col-span-2">Your review<textarea name="text" rows="4" required class="mt-2 block w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:border-red-500" placeholder="Tell us what you think..."></textarea></label><button type="submit" class="w-fit bg-red-500 text-white px-6 py-3 rounded hover:bg-red-600 transition">Submit review</button><p id="review-message" class="hidden text-green-600 text-sm self-center">Thanks for sharing your review.</p></form></section>
+    </main>
+
+    <footer class="bg-black pt-12 pb-10"><div class="container grid grid-cols-1 gap-8 md:grid-cols-3"><div class="space-y-6"><img src="./Image/logo.svg" class="w-32" alt="NTP Solution logo"><p class="text-gray-500">Furniture and home essentials chosen for comfortable, beautiful everyday living.</p><div class="flex space-x-6"><a href="#" class="text-gray-400 hover:text-white" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a><a href="#" class="text-gray-400 hover:text-white" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></div></div><div class="md:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-8"><div><h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Shop</h3><div class="mt-4 space-y-4"><a href="Shop.html" class="text-gray-500 hover:text-white block">All products</a><a href="Cart.html" class="text-gray-500 hover:text-white block">Cart</a></div></div><div><h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Support</h3><div class="mt-4 space-y-4"><a href="Account.html" class="text-gray-500 hover:text-white block">My account</a><a href="Contactus.html" class="text-gray-500 hover:text-white block">Contact us</a></div></div><div><h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Company</h3><div class="mt-4 space-y-4"><a href="Aboutus.html" class="text-gray-500 hover:text-white block">About us</a><a href="View.html" class="text-gray-500 hover:text-white block">Product view</a></div></div></div></div></footer>
+     <!--Copyright-->
+     <div class="bg-gray-800 py-4">
+        <div class="container flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"> 
+            <p class="text-white" style="align-items: center;">&copy; <b>2026</b> - Comilla University</p>
+            <img src="./Image/methods.png" alt="" class="h-5">
+        </div>
+     </div>
+     <!--Copyright End-->
+     
+    <script>
+        const reviews = [
+            { name: 'Nadia Rahman', rating: 5, date: '24 Aug 2026', text: 'The sofa is comfortable, sturdy, and looks exactly like the photos. Delivery was quick too.' },
+            { name: 'Arif Hasan', rating: 5, date: '18 Aug 2026', text: 'Beautiful finish and plenty of space for the family. Very happy with this purchase.' },
+            { name: 'Maliha Chowdhury', rating: 4, date: '09 Aug 2026', text: 'Good quality and comfortable. The color is a little warmer than I expected, but it suits the room.' },
+            { name: 'Tanvir Ahmed', rating: 3, date: '28 Jul 2026', text: 'The product is nice for the price. Assembly instructions could be clearer.' }
+        ];
+        let activeFilter = 'all';
+        function renderReviews() {
+            const sort = document.getElementById('review-sort').value;
+            const filtered = reviews.filter(review => activeFilter === 'all' || review.rating === Number(activeFilter)).sort((a, b) => sort === 'highest' ? b.rating - a.rating : sort === 'lowest' ? a.rating - b.rating : new Date(b.date) - new Date(a.date));
+            document.getElementById('reviews-list').innerHTML = filtered.length ? filtered.map(review => `<article class="py-5 first:pt-0"><div class="flex items-start justify-between gap-4"><div><h3 class="font-medium text-gray-800">${review.name}</h3><div class="text-yellow-400 text-sm mt-1">${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)} <span class="text-gray-500 ml-2">${review.date}</span></div></div><span class="text-xs text-green-600"><i class="fa-solid fa-circle-check mr-1"></i>Verified purchase</span></div><p class="text-gray-600 text-sm leading-6 mt-3">${review.text}</p></article>`).join('') : '<p class="text-gray-500 text-sm py-5">No reviews match this rating.</p>';
+        }
+        renderReviews();
+        document.querySelectorAll('.review-filter').forEach(button => button.addEventListener('click', () => { activeFilter = button.dataset.filter; document.querySelectorAll('.review-filter').forEach(item => item.className = 'review-filter px-3 py-1 text-sm rounded-full border border-gray-200 text-gray-600'); button.className = 'review-filter px-3 py-1 text-sm rounded-full bg-red-500 text-white'; renderReviews(); }));
+        document.getElementById('review-sort').addEventListener('change', renderReviews);
+        document.getElementById('write-review').addEventListener('click', () => document.getElementById('review-form-section').classList.toggle('hidden'));
+        document.getElementById('review-form').addEventListener('submit', event => { event.preventDefault(); const data = new FormData(event.target); reviews.unshift({ name: data.get('name'), rating: Number(data.get('rating')), date: 'Today', text: data.get('text') }); event.target.reset(); document.getElementById('review-message').classList.remove('hidden'); document.getElementById('review-form-section').classList.remove('hidden'); activeFilter = 'all'; document.querySelectorAll('.review-filter').forEach(item => item.className = 'review-filter px-3 py-1 text-sm rounded-full border border-gray-200 text-gray-600'); document.querySelector('[data-filter="all"]').className = 'review-filter px-3 py-1 text-sm rounded-full bg-red-500 text-white'; renderReviews(); });
+    </script>
+</body>
+</html>

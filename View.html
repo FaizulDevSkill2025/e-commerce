@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Italian L Shape Sofa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -96,10 +96,10 @@
                 <div class="flex items-center space-x-6 capitalize">
                     <a href="Index.html" class="text-gray-200 hover:text-white transition">Home</a>
                     <a href="Shop.html" class="text-gray-200 hover:text-white transition">Shop</a>
-                    <a href="#" class="text-gray-200 hover:text-white transition">About us</a>
-                    <a href="#" class="text-gray-200 hover:text-white transition">Contact Us</a>
+                    <a href="Aboutus.html" class="text-gray-200 hover:text-white transition">About us</a>
+                    <a href="Contactus.html" class="text-gray-200 hover:text-white transition">Contact Us</a>
                 </div>
-                <a href="#" class="text-gray-200 hover:text-white transition">Login/Register</a>
+                <a href="Login.html" class="text-gray-200 hover:text-white transition">Login/Register</a>
              </div>
         </div>
      </nav>
@@ -119,13 +119,13 @@
     <div class="container grid grid-cols-1 md:grid-cols-2 gap-6">
         <!--Product Image-->
         <div>
-            <img src="./Image/product9.jpg" class="w-full">
+            <img id="product-main-image" src="./Image/product9.jpg" class="w-full" alt="Italian L Shape Sofa">
             <div class="grid grid-cols-3 sm:grid-cols-5 gap-4 mt-4">
-                <img src="./Image/product9.jpg" class="w-full cursor-pointer border border-primary">
-                <img src="./Image/product10.jpg" class="w-full cursor-pointer border">
-                <img src="./Image/product11.jpg" class="w-full cursor-pointer border">
-                <img src="./Image/product12.jpg" class="w-full cursor-pointer border">
-                <img src="./Image/product12.jpg" class="w-full cursor-pointer border">
+                <img src="./Image/product9.jpg" class="product-thumbnail w-full cursor-pointer border border-primary" alt="Italian sofa front view">
+                <img src="./Image/product10.jpg" class="product-thumbnail w-full cursor-pointer border" alt="Italian sofa side view">
+                <img src="./Image/product11.jpg" class="product-thumbnail w-full cursor-pointer border" alt="Italian sofa detail">
+                <img src="./Image/product12.jpg" class="product-thumbnail w-full cursor-pointer border" alt="Italian sofa room view">
+                <img src="./Image/product12.jpg" class="product-thumbnail w-full cursor-pointer border" alt="Italian sofa alternate view">
             </div>
         </div>
         <!--Product Image End-->
@@ -140,7 +140,7 @@
                         <i class="fa-regular fa-star"></i>
                         <i class="fa-regular fa-star"></i>
                     </div>
-                        <div class="text-xs text-gray-500 ml-3">(150 Reviews)</div>
+                        <a href="Ratings&Review.html" class="text-xs text-gray-500 ml-3 hover:text-primary">(150 Reviews)</a>
                 </div>
                 <div class="space-y-2">
                     <p class="text-gray-800 font-semibold space-x-2">
@@ -185,7 +185,7 @@
                             </label>
                         </div>
                         <div class="size-selector">
-                            <input type="radio" name="size" class="hidden" id="size-m">
+                            <input type="radio" name="size" class="hidden" id="size-m" checked>
                             <label for="size-m" class="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm" style="background-color: red;">
                                 M
                             </label>
@@ -232,19 +232,22 @@
                 <div class="mt-4">
                     <h3 class="text-sm text-gray-800 uppercase mb-1">Quentity</h3>
                     <div class="flex border border-gray-300 text-gray-600 divide-x divide-gray-300 w-max">
-                        <div class="h-5 w-8 text-xl flex items-center justify-center cursor-pointer select-none">-</div>
-                        <div class="h-5 w-8 text-base flex items-center justify-center">4</div>
-                        <div class="h-5 w-8 text-xl flex items-center justify-center cursor-pointer select-none">+</div>
+                        <button type="button" id="quantity-decrease" class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none" aria-label="Decrease quantity">-</button>
+                        <output id="quantity-value" class="h-8 w-8 text-base flex items-center justify-center" aria-live="polite">1</output>
+                        <button type="button" id="quantity-increase" class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none" aria-label="Increase quantity">+</button>
                     </div>
                 </div>
                 <!--Quentity End-->
                 <!--Curt Button-->
                       <div class="flex flex-col sm:flex-row gap-3 border-b border-gray-200 pb-5 mt-6">
-                          <a href="Cart.html" class="border border-primary text-white px-4 sm:px-8 py-2 font-medium rounded uppercase flex items-center justify-center gap-2 hover:bg-transparent hover:text-primary transition" style="background-color: red;">
+                          <a id="add-to-cart" href="Cart.html" class="border border-primary text-white px-4 sm:px-8 py-2 font-medium rounded uppercase flex items-center justify-center gap-2 hover:bg-transparent hover:text-primary transition" style="background-color: red;">
                         <i class="fa-sharp fa-light fa-bag-shopping"></i> Add To Curt
                     </a>
-                    <a href="Wishlist.html" class="border border-gray-300 text-white px-4 sm:px-8 py-2 font-medium rounded uppercase flex items-center justify-center gap-2 hover:text-primary transition" style="background-color: red;">
+                    <a id="add-to-wishlist" href="Wishlist.html" class="border border-gray-300 text-white px-4 sm:px-8 py-2 font-medium rounded uppercase flex items-center justify-center gap-2 hover:text-primary transition" style="background-color: red;">
                         <i class="fa-regular fa-heart"></i> Wish List
+                    </a>
+                    <a href="Ratings&Review.html" class="border border-gray-300 text-gray-700 px-4 sm:px-8 py-2 font-medium rounded uppercase flex items-center justify-center gap-2 hover:bg-red-500 hover:text-white transition">
+                        <i class="fa-regular fa-star"></i> Ratings &amp; Reviews
                     </a>
                  </div>
                 <!--Curt Button End-->
@@ -466,7 +469,7 @@
      </div>
      <!--Product Wrapper End-->
      <!--Footer-->
-     <footer class="bg-black pt-16 pb-12 border-t border-gray-100">
+    <footer class="footer-dynamic bg-black pt-16 pb-12 border-t border-gray-100">
         <div class="container grid grid-cols-1 gap-10 md:grid-cols-3">
             <!--Footer Text-->
             <div class="space-y-8">
@@ -568,10 +571,55 @@
      <!--Copyright-->
      <div class="bg-gray-800 py-4">
         <div class="container flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"> 
-            <p class="text-white">Cumilla University -All Rights Reserved</p>
+            <p class="text-white">&copy; <b>2026</b> - Comilla University</p>
             <img src="./Image/methods.png" alt="" class="h-5">
         </div>
      </div>
      <!--Copyright End-->
+     <script>
+        const productPrice = 45;
+        let productQuantity = 1;
+        const mainImage = document.getElementById('product-main-image');
+        const quantityValue = document.getElementById('quantity-value');
+
+        document.querySelectorAll('.product-thumbnail').forEach(thumbnail => thumbnail.addEventListener('click', () => {
+            mainImage.src = thumbnail.src;
+            document.querySelectorAll('.product-thumbnail').forEach(item => item.classList.remove('border-primary'));
+            thumbnail.classList.add('border-primary');
+        }));
+
+        function updateQuantity(change) {
+            productQuantity = Math.min(Math.max(productQuantity + change, 1), 9);
+            quantityValue.textContent = productQuantity;
+        }
+
+        document.getElementById('quantity-decrease').addEventListener('click', () => updateQuantity(-1));
+        document.getElementById('quantity-increase').addEventListener('click', () => updateQuantity(1));
+
+        document.querySelectorAll('input[name="size"], input[name="color"]').forEach(input => input.addEventListener('change', () => {
+            document.querySelectorAll(`input[name="${input.name}"] + label`).forEach(label => label.classList.remove('ring-2', 'ring-red-500'));
+            input.nextElementSibling.classList.add('ring-2', 'ring-red-500');
+        }));
+
+        function showProductNotice(message) {
+            let notice = document.getElementById('product-notice');
+            if (!notice) {
+                notice = document.createElement('p');
+                notice.id = 'product-notice';
+                notice.className = 'mt-4 px-4 py-3 rounded bg-green-50 text-green-700 text-sm';
+                document.getElementById('add-to-cart').parentElement.after(notice);
+            }
+            notice.textContent = message;
+        }
+
+        document.getElementById('add-to-cart').addEventListener('click', event => {
+            event.preventDefault();
+            showProductNotice(`${productQuantity} Italian L Shape Sofa${productQuantity > 1 ? 's' : ''} added to your cart (${(productPrice * productQuantity).toFixed(2)} TK).`);
+        });
+        document.getElementById('add-to-wishlist').addEventListener('click', event => {
+            event.preventDefault();
+            showProductNotice('Italian L Shape Sofa was added to your wishlist.');
+        });
+     </script>
 </body>
 </html>

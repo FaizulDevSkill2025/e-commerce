@@ -452,6 +452,113 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 
+.container{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+footer,
+.footer-dynamic {
+  --footer-ink: #f8fafc;
+  --footer-muted: #cbd5e1;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--footer-ink);
+  background-color: #111827 !important;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    radial-gradient(circle at 12% 20%, rgba(239, 68, 68, 0.72), transparent 32%),
+    radial-gradient(circle at 88% 80%, rgba(14, 165, 233, 0.58), transparent 34%) !important;
+  background-size: 32px 32px, 32px 32px, 140% 140%, 140% 140%, auto;
+  animation: footer-aurora 16s ease-in-out infinite alternate;
+}
+
+footer::after,
+.footer-dynamic::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.08) 48%, transparent 76%);
+  background-size: 220% 100%;
+  content: '';
+  animation: footer-shimmer 12s linear infinite;
+  pointer-events: none;
+}
+
+footer > .container,
+.footer-dynamic > .container {
+  position: relative;
+  z-index: 1;
+}
+
+footer p,
+footer a,
+.footer-dynamic p,
+.footer-dynamic a {
+  color: var(--footer-muted);
+}
+
+footer a:hover,
+.footer-dynamic a:hover {
+  color: var(--footer-ink);
+}
+
+@keyframes footer-aurora {
+  from {
+    background-position: 0 0, 0 0, 0% 50%, 100% 50%, 0 0;
+  }
+  to {
+    background-position: 0 0, 0 0, 100% 50%, 0% 50%, 0 0;
+  }
+}
+
+@keyframes footer-shimmer {
+  from {
+    background-position: 220% 0;
+  }
+  to {
+    background-position: -40% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  footer,
+  footer::after,
+  .footer-dynamic,
+  .footer-dynamic::after {
+    animation: none;
+  }
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+
 h1,h2,h3,h4,h5,h6{
   font-family: 'Roboto', sans-serif;
 }
